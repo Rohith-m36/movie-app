@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+}
+
+/* Navbar Styles */
+
+.nav-link {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff5733;
+}
+
+.dropdown-menu {
+  background-color: #343a40;
+}
+
+.dropdown-item:hover {
+  background-color: #495057;
+  color: #ffffff;
+}
+
+/* Form Control Styles */
+.form-control {
+  margin-right: 10px;
+  border-radius: 20px;
+  padding: 5px;
+  font-size: 0.9rem;
+  width: 150px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Container Styles */
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Movie Grid Styles */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 20px 0;
+}
+
+/* Card Styles */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Cast Styles */
+.cast-container {
+  margin-top: 30px;
+}
+
+.cast-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.cast-card {
+  text-align: center;
+}
+
+.cast-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Movie Details Styles */
+.movie-details-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.movie-poster img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.movie-info {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Image Details Card Styles */
+.image-details-card {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: 20px;
+  transition: transform 0.2s;
+}
+
+.image-details-card:hover {
+  transform: scale(1.02);
+}
+
+.image {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.details {
+  padding: 15px;
+  flex: 1;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.rating {
+  font-weight: bold;
+  color: #f39c12;
+}
+
+/* Media Queries */
+
+/* Adjust the layout for large tablets and smaller desktops */
+@media (max-width: 992px) {
+  .movie-details-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Adjust layout for tablets */
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cast-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+/* Adjust layout for small screens and mobile devices */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure full width */
+    margin-bottom: 10px;
+  }
+
+  .nav-item {
+    margin-bottom: 10px;
+    width: 100%; /* Full width for nav items */
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+    margin-top: 10px;
+  }
+
+  .form-control {
+    width: 100%; /* Full width for mobile */
+    margin-bottom: 10px; /* Spacing between input and button */
+  }
+
+  .btn {
+    width: 100%; /* Full width button */
+  }
+
+  .navbar-collapse {
+    background-color: #333;
+    padding: 10px;
+    align-items: center;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  form input {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* General Link Styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff5733;
+  text-decoration: underline;
+}
+
+/* Button Styles */
+.btn-outline-success {
+  border-radius: 20px;
+}
+/* Movie Details Cards */
+.movie-details-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.movie-info {
+  padding: 20px;
+}
+
+.cast-container {
+  padding: 20px;
+}
+
+.cast-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.cast-card {
+  text-align: center;
+  background-color: #fff;
+  border: 1 px solid #ddd;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cast-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cast-info {
+  padding: 10px;
+}
+
+.cast-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.cast-character {
+  font-size: 1rem;
+  color: #555;
+}
+/* Main Movie Details Content */
+.movie-details-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+
+  
+  flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+}
+
+/* Hover Effect */
+.movie-details-content:hover {
+  transform: scale(1.02);
+}
+
+/* Movie Poster Section */
+.movie-poster {
+  flex: 1;
+  max-width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster-image {
+  width: 100%;
+  margin-top: 5px;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Movie Info Section */
+.movie-info {
+  flex: 2;
+  padding: 15px;
+}
+
+.movie-info h1 {
+  font-size: 1.8rem;
+  margin: 0 0 10px;
+}
+
+.movie-info p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Cast List Section */
+.cast-container {
+  width: 100%; /* Takes full width */
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cast-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.cast-card {
+  width: 150px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cast-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.cast-info {
+  font-size: 0.9rem;
+}
+
+.cast-name {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.cast-character {
+  color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .movie-details-content {
+    flex-direction: column; /* Stacks the poster and info vertically */
+  }
+
+  .movie-poster,
+  .movie-info {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .poster-image {
+    max-height: 400px;
+  }
+
+  .cast-list {
+    justify-content: space-around; /* Adjusts layout on smaller screens */
+  }
+}
